@@ -1,0 +1,18 @@
+<script>
+  document.addEventListener('rebuy:smartcart.ready', function(event){
+    Rebuy.libraries.$('.cart-icon').click(function()){
+      Rebuy.SmartCart.show();
+    });
+  });
+</script>
+
+<style>
+  .smart-cart--enabled #CartDrawer,
+  #PageContainer::after {
+    display: none !important;
+  }
+
+  .smart-cart--enabled .js-drawer-open {
+    overflow: scroll !important;
+  }
+</style>

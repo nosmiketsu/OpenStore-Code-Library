@@ -1,0 +1,30 @@
+<!-- This liquid is file is no need to create or part of theme liquid. This is just a instruction after creatin the "rebuy-smart-cart.liquid and rebuy-extensions.liquid, this is the next step.
+    
+Once the both snippet liquid is added to the theme file. Go to the theme.liquid of theme used and add this before the end </body> tag,
+
+  {% render 'rebuy-smart-cart' %}
+  <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop=(shop_name).myshopify.com"></script>     
+
+Please make sure you change the shop_name as what the shop_name of the brand or store.
+        
+After adding this enable the smart cart thru rebuy, and it should be working fine.
+    
+*****************************************
+
+From this point. If the Live Theme should not have a Smart Cart, but the smart cart should be enable for the hidden theme or A/B Test Theme. 
+
+add this script code, 
+
+  <script>
+    window.addEventListener('load', function() {
+      // Call the destroy method to hide the cart
+      Rebuy.SmartCart.destroy();
+    });
+  </script>
+
+This script code allows us to destroy the Smart Cart on the theme while its the Smart Cart is enabled on the Rebuy, and it allows us to use the Native Cart or Drawer of the Theme.
+
+
+
+->
+

@@ -1,0 +1,30 @@
+<!-- random liquid added from JA main-product.liquid - -->
+<!-- code start from line 660 to 681 -->
+
+<div class="exit-intent-popup">
+  <div class="exit-modal">
+    <div class="content">
+      <div class="exit-modal-img">
+        <img src="" alt="">
+      </div>
+      <div class="exit-modal-right">
+        <span class="close">x</span>
+        <div class="exit-modal-title">
+          <h3>
+            Last Chance To Save On The<br>
+            {{- product.title -}}
+          </h3>
+          <h4>
+            Get it Now For {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+            <span>
+              {{- product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros -}}
+            </span>
+          </h4>
+        </div>
+        <div class="exit-modal-content"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end of code -->

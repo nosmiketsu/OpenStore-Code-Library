@@ -1,0 +1,59 @@
+<!-- Additional liquid code to hdie header and footer to specific pages - start -->
+
+{% if template.suffix contains 'h-limited-time-offers' %}
+  <style>
+    #shopify-section-header-classic {
+      display: none;
+    }
+
+    .os-ribbon.css-51ld7 {
+      display: none;
+    }
+
+    .os-ribbon.css-2bpx9i {
+      display: none;
+    }
+
+    #shopify-section-footer-classic {
+      display: none;
+    }
+  </style>
+{% endif %}
+
+<!-- Additional liquid code to hdie header and footer to specific pages - start -->
+
+<!-- Redirect to checkout CTA start - -->
+
+{% if template.suffix contains 'deluxe-led-travel-kit-lp2' %}
+  <!-- Additional liquid code to skip cart for specifi LPs - added by Kim Pomento 06/13/2023 -->
+  {% if settings.cart_action == 'redirect_cart' %}
+    <input type="hidden" name="return_to" value="/checkout">
+  {% endif %}
+{% endif %}
+
+{% if template.suffix contains 'deluxe-led-travel-kit-lp1' %}
+  {% if settings.cart_action == 'redirect_cart' %}
+    <input type="hidden" name="return_to" value="/checkout">
+  {% endif %}
+{% endif %}
+
+{% if template.suffix contains 'deluxe-led-lp-2' %}
+  {% if settings.cart_action == 'redirect_cart' %}
+    <input type="hidden" name="return_to" value="/checkout">
+  {% endif %}
+{% endif %}
+
+{% if template.suffix contains 'deluxe-led-lp-1' %}
+  {% if settings.cart_action == 'redirect_cart' %}
+    <input type="hidden" name="return_to" value="/checkout">
+  {% endif %}
+{% endif %}
+
+{% if template.suffix contains 'regular-led-device' %}
+  {% if settings.cart_action == 'redirect_cart' %}
+    <input type="hidden" name="return_to" value="/checkout">
+  {% endif %}
+{% endif %}
+<!-- end of additional code 07/18/2023 -->
+
+<!-- Redirect to checkout CTA end - -->
