@@ -1,0 +1,22 @@
+<!-- BNPL marketing copy - start -->
+
+{% form 'product', product %}
+  {{ form | payment_terms }}
+
+  <style>
+    .shopify-installments__learn-more {
+      display: none !important;
+    }
+  </style>
+{% endform %}
+
+<!-- BNPL marketing copy - end -->
+
+<!-- Longterm resolution is adding a custom code inside Rebuy's smart cart: -->
+
+<style>
+  button.rebuy-button.rebuy-cart__shop-pay-button.block {
+    display: flex;
+    justify-content: center;
+  }
+</style>
