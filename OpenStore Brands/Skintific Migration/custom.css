@@ -1,0 +1,11 @@
+/* added additional CSS for Skintific Migration - Kim Pomento - Start */
+
+
+@media screen and (max-width: 1023px) {
+    #shopify-section-template--14826124574855__product-grid .grid {
+        display: block;
+    }
+}
+
+
+/* added additional CSS for Skintific Migration - Kim Pomento - end */
