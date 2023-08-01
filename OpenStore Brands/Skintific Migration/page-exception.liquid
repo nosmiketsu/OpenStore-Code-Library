@@ -54,6 +54,13 @@
     <input type="hidden" name="return_to" value="/checkout">
   {% endif %}
 {% endif %}
+
+{% if template.suffix contains 'deluxe-wand-bundle' %}
+  {% if settings.cart_action == 'redirect_cart' %}
+    <input type="hidden" name="return_to" value="/checkout">
+  {% endif %}
+{% endif %}
+
 <!-- end of additional code 07/18/2023 -->
 
 <!-- Redirect to checkout CTA end - -->
