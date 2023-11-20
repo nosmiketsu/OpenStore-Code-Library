@@ -1,0 +1,52 @@
+<style>
+
+    /* additional css added to the theme.css of the theme added to at the bottom */
+
+    /* Addedd CSS from Kimson Pomento for Migration */
+
+    /* PDP Top Spacing - Kimson Pomento - start*/
+
+    @media screen and (max-width: 474px) {
+        #shopify-section-template--16798813487338__main {
+        margin-top: -24px!important;
+        }
+    }
+    
+    /* PDP Top Spacing - Kimson Pomento - start */
+    
+    /* HP Collection 3 Desktop and 4 Mobile - Kimson Pomento - start */
+    
+    @media screen and (min-width: 768px) {
+        #shopify-section-template--16813746454762__16624574747e3c27ed #product-item-3680697876532 {
+        display: none;
+        }
+    }    
+    /* HP Collection 3 Desktop and 4 Mobile - Kimson Pomento - start */
+    
+    /* INTELLIGEMS: This style is to make the progress bar fit the 100% of their parent container */
+    .ig-dp-container {
+        max-width: 100%!important;
+        width: 100%!important;
+    }
+    
+    /* start - remove the view cart button and add some css of it CU link here https://app.clickup.com/t/86aymg8d0 - Kimson Pomento */
+    
+    button#CheckOut {
+        font-size: 15px!important;
+        border-radius: 5px!important;
+    }
+    
+    #ViewCart {
+        display: none !important;
+    }
+    
+    #site-cart-sidebar .sidebar__footer {
+        position: sticky !important;
+    }
+    
+    /* end above */
+    
+    li.XLcXEW3RnM9fyU7k7fvC {
+        display: none;
+    }
+</style>
