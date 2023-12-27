@@ -1,0 +1,43 @@
+.sd-product-variants {
+    margin-top: 20px;
+}
+.sd-product-variants>div {
+    margin-top: 20px;
+}
+.sd-variants-list ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0;
+}
+
+ul {
+    margin-inline-start: 1em;
+}
+
+:where(ol,ul):not(.unstyled-list) li {
+    padding-inline-start: 0.25rem;
+    margin-block-start: 0!important;
+}
+
+.sd-variants-list li+li {
+    margin-left: 15px;
+}
+
+.sd-product-variants>div {
+    margin-top: 20px;
+}
+
+
+.sd-variants-list img {
+    border-radius: 100%;
+    display: block;
+    width: 48px;
+    height: 48px;
+    border: 1px solid transparent;
+    padding: 2px;
+    object-fit: cover;
+}
+.sd-variants-list li.active img {
+    border-color: #000;
+}
