@@ -248,7 +248,35 @@ class CodeQualifier < Qualifier
   end
 end
 
-CAMPAIGNS = [
+class Selector
+  def partial_match(match_type, item_info, possible_matches)
+    match_type = (match_type.to_s + '?').to_sym
+    if item_info.kind_of?(Array)
+      possible_matches.any? do |possibility|
+        item_info.any? do |search|
+          search.send(match_type, possibility)
+        end
+      end
+    else
+      possible_matches.any? do |possibility|
+        item_info.send(match_type, possibility)
+      end
+    end
+  end
+end
+
+class ProductIdSelector < Selector
+  def initialize(match_type, product_ids)
+    @invert = match_type == :not_one
+    @product_ids = product_ids.map { |id| id.to_i }
+  end
+
+  def match?(line_item)
+    @invert ^ @product_ids.include?(line_item.variant.product.id)
+  end
+end
+
+CAMPAIGNS = [ # https://app.clickup.com/t/86ayvmkrk contact Kim Pomento for details
   TieredDiscount.new(
     :all,
     nil,
@@ -257,7 +285,10 @@ CAMPAIGNS = [
       :match,
       ["SAVEBIG"]
     ),
-    nil,
+    ProductIdSelector.new(
+      :not_one,
+      ["6595177676918"] # to exclude the route to the discount offers
+    ),
     :fixed,
     :cart_subtotal,
     [{:tier => "150", :discount => "30", :message => "Spend $150 and get $30 off!"},	{:tier => "200", :discount => "50", :message => "Spend $200 and get $50 off!"}]
