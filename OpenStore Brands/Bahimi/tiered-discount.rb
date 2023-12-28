@@ -291,7 +291,8 @@ CAMPAIGNS = [ # https://app.clickup.com/t/86ayvmkrk contact Kim Pomento for deta
     ),
     :fixed,
     :cart_subtotal,
-    [{:tier => "150", :discount => "30", :message => "Spend $150 and get $30 off!"},	{:tier => "200", :discount => "50", :message => "Spend $200 and get $50 off!"}]
+    [{:tier => "150", :discount => "30", :message => "Spend $150 and get $30 off!"},	
+     {:tier => "200", :discount => "50", :message => "Spend $200 and get $50 off!"}]
   )
 ].freeze
 
