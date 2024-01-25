@@ -1,0 +1,57 @@
+
+/* 
+
+New Instruction to enable the smart cart of rebuy 
+
+1. Enable the smart cart of rebuy from the App 
+2. Add the additional CSS to the Custom CSS field of smart cart available near at the bottom of the page. CSS style code below 
+
+*/
+
+<style>
+#site-cart-sidebar {
+	display: none!important;
+}
+.rebuy-cart__shop-pay-button>svg {
+	margin: auto!important;
+	width: 90px!important;
+ }
+ .rebuy-cart__flyout .rebuy-button+.rebuy-button {
+ 	border-color: transparent!important;
+    border-radius: 100px!important;
+ }
+ button.rebuy-button.rebuy-cart__checkout-button.block {
+ 	border-radius: 100px!important;
+    margin-top: 20px!important;
+ }
+</style>
+
+/* 3. Add the script to advance settings of Smart Cart Rebuy available at the bottom of page. */
+
+
+<script>
+
+/* put this on the ready box. Remove the script tag and end tag of it */
+
+ document.querySelector('.header__top .area--cart').addEventListener('click', () => {
+    Rebuy.SmartCart.show();
+  
+  });
+  
+  document.querySelector('.sticky-header .area--cart').addEventListener('click', () => {
+    Rebuy.SmartCart.show();
+  });
+</script>
+
+
+/* 4. Add the script to advance settings of Smart Cart Rebuy available at the bottom of page. */
+
+<script>
+
+/* put this on the hide box. Remove the script tag and end tag of it */
+
+  document.querySelector('.sidebar__close').click();
+
+</script>
+
+
